@@ -17,10 +17,10 @@ jobs:
             - ccache --version
             - dot -version
             - kmod --version
-            - mscgen --version
             - dpkg-query -l libcunit1
             - dpkg -l |grep pcap
             - openssl version -a
             - apt-cache showpkg libtool
             - ruby --version
             - clang --version
+            - mscgen --version
