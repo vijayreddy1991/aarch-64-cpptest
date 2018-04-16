@@ -1,0 +1,26 @@
+jobs:
+  - name: aarch64-cpp-test
+    type: runSh
+    runtime:
+     nodePool: custom__aarch64__Ubuntu_16_04 
+    steps:
+      - TASK:
+          runtime:
+            options:
+              imageName: "drydock/aarch64_u16cppall"
+              imageTag: master
+          script:
+         
+            - gcc --version
+            - autoconf --version
+            - automake --version
+            - ccache --version
+            - dot -version
+            - kmod --version
+            - mscgen --version
+            - dpkg-query -l libcunit1
+            - dpkg -l |grep pcap
+            - openssl version -a
+            - apt-cache showpkg libtool
+            - ruby --version
+            - clang --version
