@@ -23,4 +23,4 @@ jobs:
             - apt-cache showpkg libtool
             - ruby --version
             - clang --version
-            - mscgen -v
+            - apt-cache showpkg mscgen
